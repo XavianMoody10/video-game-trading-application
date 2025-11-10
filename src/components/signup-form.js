@@ -8,10 +8,10 @@ export default function SignupForm({ action }) {
     <form className=" space-y-4" action={action}>
       <div className=" space-y-2">
         <FormInput type={"text"} placeholder={"Username"} name={"username"} />
-        <FormInput type={"email"} placeholder={"Email"} name={"email"} />
+        <FormInput type={"text"} placeholder={"Email"} name={"email"} />
         <FormInput
           type={"password"}
-          placeholder={"Pasword"}
+          placeholder={"Password"}
           name={"password"}
         />
       </div>

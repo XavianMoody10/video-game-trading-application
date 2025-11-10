@@ -5,7 +5,7 @@ import FormInput from "./form-input";
 
 export default function LoginForm({ action }) {
   return (
-    <form className=" space-y-4" action={action}>
+    <form action={action} className=" space-y-4">
       <div className=" space-y-2">
         <FormInput type={"email"} placeholder={"Email"} name={"email"} />
         <FormInput
