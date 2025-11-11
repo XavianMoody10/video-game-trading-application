@@ -6,9 +6,10 @@ import CredentialsProvider from "next-auth/providers/credentials";
 export const authOptions = {
   providers: [
     CredentialsProvider({
-      name: "credentials",
+      id: "credentials",
+      name: "Credentials",
       credentials: {
-        email: { label: "email", type: "email" },
+        email: { label: "email", type: "text" },
         password: {
           label: "password",
           type: "password",
@@ -25,6 +26,7 @@ export const authOptions = {
 
         if (user) {
           return {
+            id: user?.id,
             name: user?.username,
             email: user?.email,
           };

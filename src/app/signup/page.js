@@ -16,6 +16,7 @@ export default function SignupPage() {
     message: "",
   });
 
+  // Signup process
   async function signupAction(formData) {
     const data = {
       username: formData.get("username"),
