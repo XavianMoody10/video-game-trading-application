@@ -1,5 +1,6 @@
 "use client";
 
+import LoadingPageOverlay from "@/components/loading-page-overlay";
 import LoginForm from "@/components/login-form";
 import PageErrorMessage from "@/components/page-error-message";
 import { signIn, useSession } from "next-auth/react";
@@ -68,11 +69,7 @@ export default function Home() {
 
   return (
     <>
-      {status === "loading" && (
-        <div className=" fixed top-0 left-0 right-0 bottom-0 bg-black/55 flex items-center justify-center">
-          <ClipLoader color="white" size={30} />
-        </div>
-      )}
+      {status === "loading" && <LoadingPageOverlay />}
 
       <PageErrorMessage
         isOpen={errorMessage.isOpen}
